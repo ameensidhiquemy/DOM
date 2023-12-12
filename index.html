@@ -38,15 +38,21 @@
       </div>
     </div>
     <script>
-      var items = document.getElementsByClassName("list-group-item");
-      items[1].textContent = "Hello";
-      items[1].style.fontWeight = "bold";
-      items[1].style.backgroundColor = "yellow";
+      var secondItem = document.querySelector('#items li:nth-child(2)');
+      secondItem.style.backgroundColor = 'green';
 
-    var items = document.getElementsByTagName("li");
-    items[1].textContent = "Hello";
-    items[1].style.fontWeight = "bold";
-    items[1].style.backgroundColor = "yellow";
+      var secondItemAll = document.querySelectorAll('#items li:nth-child(2)');
+      for (var i = 0; i < secondItemAll.length; i++) {
+        secondItemAll[i].style.color = 'green';
+      }
+      var oddItems = document.querySelectorAll('.list-group-item:nth-child(odd)');
+      for (var i = 0; i < oddItems.length; i++) {
+        oddItems[i].style.backgroundColor = 'green';
+      }
+
+      var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+      thirdItem.style.display = 'none';
+
     </script>
   </body>
 </html>
